@@ -1,3 +1,6 @@
+#Exibir tabuada do numero digitado
+#https://www.youtube.com/watch?v=qajq3SI0QQs
+
 N = int(input('Digite um numero inteiro: '))
 
 print('TÁBUADA DE {}'.format(N))

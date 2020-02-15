@@ -1,3 +1,6 @@
+#Conversor de Moeda
+#https://youtu.be/qajq3SI0QQs
+
 N = float(input('Qual o valor deseja converter: '))
 
 DOLAR = N/3.27

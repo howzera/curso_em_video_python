@@ -1,3 +1,6 @@
+#Calcular a quantidade de tinta necessária para pintar o m² de parede.
+#https://youtu.be/mzSJpn9ldt4
+
 L = float(input('Digite a largura: '))
 A = float(input('Digite a altura: '))
 
