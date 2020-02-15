@@ -1,4 +1,6 @@
 #CONVERSOR SIMPLES DE MÉDIDAS
+#https://youtu.be/KjcdG05EAZc
+#Adicionar cores
 
 N = int(input('Digite um valor em metros: '))
 
