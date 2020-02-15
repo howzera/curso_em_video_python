@@ -1,5 +1,5 @@
-#STATEMENT ON EXERCISE
-#033 - Make a code that reads three numbers and show what is the higher number and what is the lower number:
+#Exercício Python 033: Faça um programa que leia três números e mostre qual é o maior e qual é o menor.
+#https://youtu.be/a_8FbW5oH6I
 
 a = int(input('Digite o valor de A: '))
 b = int(input('Digite o valor de B: '))

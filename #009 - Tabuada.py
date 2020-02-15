@@ -1,22 +1,23 @@
-#Exibir tabuada do numero digitado
+#Exercício Python 009: Faça um programa que leia um número Inteiro qualquer e mostre na tela a sua tabuada.
 #https://www.youtube.com/watch?v=qajq3SI0QQs
+#Adicionar cores
 
 N = int(input('Digite um numero inteiro: '))
 
-print('TÁBUADA DE {}'.format(N))
+print('\nTÁBUADA DE {}'.format(N))
 
-print('='*20)
+print('\033[1;36m='*15)
 
-print('{} X 1 = {}'.format(N, N*1))
-print('{} X 2 = {}'.format(N, N*2))
-print('{} X 3 = {}'.format(N, N*3))
-print('{} X 4 = {}'.format(N, N*4))
-print('{} X 5 = {}'.format(N, N*5))
-print('{} X 6 = {}'.format(N, N*6))
-print('{} X 7 = {}'.format(N, N*7))
-print('{} X 8 = {}'.format(N, N*8))
-print('{} X 9 = {}'.format(N, N*9))
-print('{} X 10 = {}'.format(N, N*10))
+print('\033[1;37m{}\033[m X 1 = \033[1;37m{}\033[m'.format(N, N*1))
+print('\033[1;36m{}\033[m X 2 = \033[1;36m{}\033[m'.format(N, N*2))
+print('\033[1;35m{}\033[m X 3 = \033[1;35m{}\033[m'.format(N, N*3))
+print('\033[1;34m{}\033[m X 4 = \033[1;34m{}\033[m'.format(N, N*4))
+print('\033[1;33m{}\033[m X 5 = \033[1;33m{}\033[m'.format(N, N*5))
+print('\033[1;32m{}\033[m X 6 = \033[1;32m{}\033[m'.format(N, N*6))
+print('\033[1;31m{}\033[m X 7 = \033[1;31m{}\033[m'.format(N, N*7))
+print('\033[1;30m{}\033[m X 8 = \033[1;30m{}\033[m'.format(N, N*8))
+print('\033[1;37m{}\033[m X 9 = \033[1;37m{}\033[m'.format(N, N*9))
+print('\033[1;36m{}\033[m X 10 =\033[1;36m{}\033[m'.format(N, N*10))
 
 
-print('='*20)
+print('\033[1;36m='*15)

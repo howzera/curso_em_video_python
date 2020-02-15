@@ -1,4 +1,4 @@
-#Soma simples de dois numeros
+#Exercício Python 003: Crie um programa que leia dois números e mostre a soma entre eles.
 #https://youtu.be/PB254Cfjlyk
 #Adicionar cores
 

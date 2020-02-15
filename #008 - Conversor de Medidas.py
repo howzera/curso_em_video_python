@@ -1,4 +1,4 @@
-#CONVERSOR SIMPLES DE MÉDIDAS
+#Exercício Python 008: Escreva um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros.
 #https://youtu.be/KjcdG05EAZc
 #Adicionar cores
 

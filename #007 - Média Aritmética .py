@@ -1,4 +1,4 @@
-#EXIBIR MÉDIA DE DUAS NOTAS
+#Exercício Python 007: Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
 #https://youtu.be/mqcNw_dhl8I
 #Adicionar cores
 

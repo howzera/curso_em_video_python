@@ -1,4 +1,4 @@
-#Utilizando o print para responder o usuário
+#Exercício Python 002: Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.
 #https://www.youtube.com/watch?v=FNqdV5Zb_5Q&
 #Adicionar cores
 

@@ -1,3 +1,6 @@
+#Exercício Python 026: Faça um programa que leia uma frase pelo teclado e mostre quantas vezes aparece a letra "A", em que posição ela aparece a primeira vez e em que posição ela aparece a última vez.
+#https://youtu.be/23UOVEetNPY
+
 N = str(input('Digite uma frase: ')).upper().strip()
 
 print('Quantas vezes aparece a letra A? | R: {}'.format(N.count('A')))

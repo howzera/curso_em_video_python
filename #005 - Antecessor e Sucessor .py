@@ -1,4 +1,4 @@
-#Exibindo numero antecessor e o sucessor
+#Exercício Python 005: Faça um programa que leia um número Inteiro e mostre na tela o seu sucessor e seu antecessor.
 #https://youtu.be/664e0G_S9nU
 #Adicionar cores
 

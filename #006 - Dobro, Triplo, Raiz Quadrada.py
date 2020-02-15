@@ -1,4 +1,4 @@
-#Exibir o Dobro, Triplo e raiz quadrada
+#Exercício Python 006: Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada.
 #https://youtu.be/mqcNw_dhl8I
 #Adicionar cores
 
