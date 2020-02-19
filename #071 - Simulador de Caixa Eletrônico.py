@@ -2,7 +2,6 @@
 # No início, pergunte ao usuário qual será o valor a ser sacado (número inteiro) e o programa 
 # vai informar quantas cédulas de cada valor serão entregues.
 # CÉDULAS 50, 20, 10, 1.
-#
 
 print('='*30)
 print('{:^30}'.format('CAIXA ELETRONICO'))
