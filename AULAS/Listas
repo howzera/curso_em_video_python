@@ -1,0 +1,475 @@
+======================================PYTHON======================================
+======================================LISTAS======================================
+==================================================================================
+
+
+    Durante o desenvolvimento de software, independentemente da plataforma e 
+linguagem, é comum a necessidade de lidar com listas. Por exemplo, elas podem
+ser empregadas para armazenar contatos telefônicos ou tarefas.
+
+Uma lista é uma estrutura de dados composta por itens organizados de forma  
+linear, na qual cada um pode ser acessado a partir de um índice, que representa
+sua posição na coleção ( iniciando sempre em zero )
+
+Listas em Python são capazes de armazenar simultaneamente objetos de diferentes
+tipos, como strings, números e até mesmo outras listas e diferente de Tuplas, as
+Listas SÃO MUTÁVEIS, podemos alterar, adicionar e remover elementos das listas.
+
+===================================================================================
+
+    • CRIANDO LISTAS
+
+    Em Python, uma lista é representada como uma sequência de objetos separados
+por vírgula e dentro de colchetes [], assim, uma lista vazia, por exemplo, pode
+ser representada por colchetes sem nenhum conteúdo.
+
+
+    Exemplos:
+
+===================================================================================
+
+    EX 1: Uma lista vázia 
+
+    >>> lista = []              # Criando uma lista vázia
+    >>> lista                   # Acessando lista
+    []                          # Exibindo o que temos na lista, nada.
+
+-----------------------------------------------------------------------------------
+
+    EX 2: Uma lista com strings e números.
+
+    >>> lista = ['Carro', 'Peixe', 123, 111] # Criando uma lista
+    >>> lista                                # Acessando lista
+    ['Carro', 'Peixe', 123, 111]             # Exibindo o que temos na lista.
+    
+    • Neste exemplo podemos ver que conseguimos útlizar números inteiros e strings
+    dentro de uma só lista.
+
+-----------------------------------------------------------------------------------
+
+    EX 3: Uma lista dentro de outra lista.
+
+    >>> nova_lista = ['Papel', lista]       # Criando uma lista com outra lista 
+    >>> nova_lista                          # Acessando a lista
+    ['Papel', ['Carro', 'Peixe', 123, 111]] # Exibindo o que temos na nova lista
+
+    • Aqui, utlizamos a lista usada nos exemplos anteriores para integrar uma nova
+    lista, podemos observar que além de conseguirmos adicionar números inteiros e 
+    strings na lista, também conseguimos adicionar uma lista dentro da outra.
+
+
+===================================================================================
+    
+    
+    • OPERADORES DE UMA LISTA
+
+    A linguagem Python dispõe de vários métodos e operadores para auxiliar na 
+manipulação de listas. O primeiro e mais básico é o operador de acesso aos seus 
+itens a partir dos índices. Para compreendelo, é importante entender como
+os dados são armazenados nessa estrutura, tentarei ilustrar abaixo:
+
+
+    Listas > ['CARRO', 'PEIXE', 123, 111]
+    Índices      0        1      2    3
+    
+    # Aqui temos uma representação de uma lista e seu índice.    
+
+    Tendo em mente essa organização interna, podemos acessar cada um dos 
+elementos utilizando a sintaxe lista[índice].
+
+    Exemplos:
+
+===================================================================================
+
+    EX 1: Acessando elemento através do index
+
+    >>> lista [0]   # Utilizando a mesma lista dos exemplos anteriores
+    'Carro'         # buscamos o elemento armazenado no index 0 da lista.
+    
+-----------------------------------------------------------------------------------
+    
+    EX 2: Acessando a lista dentro da nova lista
+                                  
+                                  # O mesmo acontece aqui, agora acessamos o index [1]
+    >>> nova_lista[1]             # E o terminal nos mostrou a lista armazenada no index [1]
+    ['Carro', 'Peixe', 123, 111]  # da nova_lista, se digitarmos index[0] vamos receber
+                                  # 'Papel'    
+
+-----------------------------------------------------------------------------------
+    
+    EX 3: Complemento do exemplo 2
+
+    >>> nova_lista[0]            # Acessando index[0] de nova_lista
+    'Papel'                      # Recebemos 'Papel'
+
+    
+===================================================================================
+
+    • COMPRIMENTO DE UMA LISTA
+
+    O comprimento de uma lista, ou número de itens que a compõem, pode ser obtido
+a partir da função len(), como mostra o código abaixo, em que é impresso o valor 2,
+indicando que a variável no_lista contém 2 elementos.
+
+    >>> len(nova_lista)
+    2
+
+===================================================================================
+
+    • CONCATENAÇÃO E MULTIPLICAÇÃO
+
+    Também é possível concatenar listas por meio do operador de adição + e de multi-
+plicá-las* por um inteiro, o que gerará várias cópias dos seus itens. O código a
+seguir traz alguns exemplos dessas operações:
+
+    # Concatenamos as listas através do operador +:
+    >>> lista+nova_lista
+    ['Carro', 'Peixe', 123, 111, 'Papel', ['Carro', 'Peixe', 123, 111]]
+
+    # Multiplicamos a lista através do operador *:
+    >>> lista*2
+    ['Carro', 'Peixe', 123, 111, 'Carro', 'Peixe', 123, 111]    
+
+===================================================================================
+
+    • VERIFICANDO A EXISTÊNCIA DE ITENS EM UMA LISTA
+
+    Em alguns casos é preciso verificar se um determinado valor está contido em uma
+lista. Para isso, em Python utilizamos o operador 'IN', que indicará True se o ob-
+jeto pertencer ao conjunto, e False caso contrário. No código a seguir temos exem-
+plos de uso desse operador.
+
+    >>> 'Peixe' in lista            # Verificando a existencia da string 'Peixe'
+    True                            # Sim, temos peixe na lista exemplo.
+
+    Uma observação importante é que se tentarmos procurar 'PEIXE' ele irá nos re-
+tornar False, pois a linguagem interpreta diferenças como maiúsculas e minúsculas,
+porém existe algumas formas de contornar essa situação.
+
+===================================================================================
+
+    • VALORES MÍNIMOS, MÁXIMO E SOMA
+
+    O Python oferece ainda as funções min(), max() e sum(), através das quais é
+possível encontrar, respectivamente, o menor valor, o maior valor ou ainda reali -
+zar a soma de todos os elementos da lista DESDE QUE SEJAM INT OU FLOOR, se tentar-
+mos somar uma string, ele retornará um erro e não irá realizar a operação.
+
+    Exemplo: Vamos útilizar uma nova lista aqui, só com números
+
+    >>> numeros = [14.2, 13.2, 10, 9, 2, 23]
+
+
+-----------------------------------------------------------------------------------
+
+    EX 1: MIN()
+
+    >>> min(numeros)              # Solicitamos o menor número da lista numeros
+    2                             # Nos retornou o menor valor da lista.
+
+-----------------------------------------------------------------------------------
+
+    EX 2: MAX()
+
+    >>> max(numeros)              # Solicitamos o maior número da lista numeros
+    23                            # Nos retornou o maior valor da lista.
+    
+-----------------------------------------------------------------------------------
+
+    EX 3: SUM()
+
+    >>> sum(numeros)             # Solicitamos a soma de todos os numeros da lista
+    71.4                         # Nos retornou a soma de todos os valores
+
+===================================================================================
+
+    • MÉTODOS DAS LISTAS
+
+
+    Nas seções anteriores, vimos os operadores e funções que recebem uma lista como
+argumento, retornam um resultado, mas não efetuam alteração na sua estrutura.
+A partir de agora veremos métodos pertencentes ao tipo lista, e que nos permitem 
+incluir ou remover elementos, bem como classificar as coleções.
+
+-----------------------------------------------------------------------------------
+
+• .append()
+
+    O primeiro método a ser analisado é o .append(), que tem por objetivo adicionar um
+novo elemento no final da lista, conforme mostra o código abaixo:
+
+    EX 1: Adicionando elemento com o comando .append('Elemento')
+
+    >>> livros = ['Java', 'SqlServer', 'Delphi', 'Python']    # Criando lista
+    >>> livros.append('Android')                              # Adicionar elemento
+    >>> livros                                                # Acessar lista
+    >>> ['Java', 'SqlServer', 'Delphi', 'Python', 'Android']  # Exibindo lista
+
+-----------------------------------------------------------------------------------
+
+• .insert()
+
+    Caso desejarmos fazer essa inserção em uma posição específica podemos utilizar 
+o método .insert(posição) que, além do elemento a ser inserido, recebe também o ín-
+dice que ele deve assumir:
+
+    EX 2: Acidionando elemento com o comando .insert(posição,'Elemento')
+
+    >>> livros.insert(0,'Oracle')                       # Adicionando elemento
+    >>> livros                                          # Exibindo lista 
+    ['Oracle', 'Java', 'SqlServer', 'Delphi', 'Python'] # Oracle foi adicionado
+    
+    OBS: Repare que de primeiro devemos informar a posição, (0,) em seguida o que
+desejamos inserir, (,'Oracle'), como a posição 0 é o primeiro index da lista, foi
+adicionado 'Oracle' no inicio da lista e o restante da lista foi reposicionado.
+
+-----------------------------------------------------------------------------------
+
+• .pop()
+
+    Existem algumas formas de remover um elemento de uma lista, um deles é o método
+.pop(), que remove o último item da lista e o retorna como resultado da operação. 
+Caso necessário, você pode remover um índice específico, basta informá-lo como ar-
+gumento.
+
+    EX 3: Removendo último elemento da lista e removendo através de um index.
+
+    >>> livros                                                # Acessando lista
+    >>> ['Java', 'SqlServer', 'Delphi', 'Python', 'Android']  # Exibindo
+    >>> livros.pop()                                          # Comando pop
+    'Android'                                                 # Elemento apagado
+
+    # Agora vamos exibir a lista novamente para ver se o comando surtiu feito
+    
+    >>>>>> livros                                             # Acessando
+    ['Java', 'SqlServer', 'Delphi', 'Python']                 # Lista alterada
+
+    # Como podemos observar, o último elemento da lista['Android'] foi apagado.
+
+    Agora útilizando um index como argumento.
+
+    >>> livros.pop(1)         # Apagando elemento do index 1
+    'SqlServer'               # Retornando elemento armazenado no index escolhido
+    >>> livros                # Acessando lista para ver alteração
+    ['Java', 'Delphi', 'Python'] # Nova lista depois de alterada.
+
+-----------------------------------------------------------------------------------
+
+• .remove()
+
+    Nos dois casos a remoção foi feita através do index do objeto, mas existem si -
+tuações em que o índice é desconhecido e desejamos remover o item a partir do seu 
+valor/elemento. Para isso temos o método .remove('Elemento') que, conforme o exem -
+plo abaixo, remove O PRIMEIRO elemento encontrado com o parâmetro informado.
+
+
+    EX 4: Removendo elementos útilizando eles mesmos como referência
+
+    Neste exemplo vamos por partes.
+
+    # Vamos criar uma lista de livros com 1 nome repetido, como pode observar, no 
+    inicio e no fim temos 'Oracle'.
+
+    >>> livros = ['Oracle', 'Java', 'SqlServer', 'Delphi', 'Python', 'Android', 'Oracle'] 
+
+    # Vamos exibir a lista só para confirmarmos se está tudo certo 
+
+    >>> livros
+    ['Oracle', 'Java', 'SqlServer', 'Delphi', 'Python', 'Android', 'Oracle']    
+
+    # Ok, ele nos retornou a lista, agora vamos utilizar o comando .remove('Oracle')
+
+    >>> livros.remove('Oracle')
+
+    # Diferente do comando pop, ele não nos retorna a alteração. Portanto, vamos 
+    acessar a lista para conferirmos o que aconteceu com ela.
+
+    >>> livros
+    ['Java', 'SqlServer', 'Delphi', 'Python', 'Android', 'Oracle']
+
+    # Observe que foi removido apenas o primeiro elemento encontrado como 'Oracle'.
+    # Se tentarmos remover novamente o elemento 'Oracle' ele irá nos retornar erro.
+
+
+===================================================================================
+
+
+    • MÉTODOS DE ORDENAÇÃO, INVERSÃO E CONTAGEM.
+
+    Outros métodos muito importantes ao trabalhar com listas são o .sort(), que or-
+dena lista, o .reverse() que inverte as posições dos itens o .cout() que realiza 
+contagens na lista. No caso das ordenações de listas, elas são feitas por ordem 
+crescente para números e lexicográfica para strings, ou seja, na forma na qual -
+estão ordenadas no dicionário.  
+
+Por partes vamos aos exemplos de cada um deles:
+
+-----------------------------------------------------------------------------------
+
+• .reverse()
+
+    Utilizado para inverter a posição atual da lista.
+
+
+    EX 01: Utilizando reverse na lista
+
+    # Essa é nossa lista repare como ela está atribuída atualmente.
+
+    >>> livros
+    ['Java', 'SqlServer', 'Delphi', 'Python', 'Android', 'Oracle']
+
+
+    # Agora vamos aplicar o comando .reverse() na lista livros:
+
+    >>> livros.reverse()
+
+    # Repare que ela também não nos retorna a nova lista diretamente. 
+    # Portanto vamos acessala
+
+    >>> livros
+    ['Oracle', 'Android', 'Python', 'Delphi', 'SqlServer', 'Java']
+
+    # Observe que a aplicação é simples, ele simplesmente reposicionou
+    # os elementos de trás pra frente.
+
+-----------------------------------------------------------------------------------
+
+
+• .sort()
+
+    Utilizado para ordenar a lista em ordem alfabética e/ou ordem numérica.
+
+    EX 02: Utilizando sort na lista.
+
+    # Essa é nossa lista, vamos verificar como ela está atribuída atualmente.
+
+    >>> livros
+    ['Oracle', 'Android', 'Python', 'Delphi', 'SqlServer', 'Java']
+
+    # Agora vamos aplicar o comando .sort():
+
+    >>> livros.sort()
+
+    # Repare que ela também não nos retorna a nova lista diretamente. 
+    # Portanto vamos acessala
+
+    >>> livros
+    ['Android', 'Delphi', 'Java', 'Oracle', 'Python', 'SqlServer']
+
+    # Observe que agora a lista está ordenada por ordem alfabética.
+    
+
+-----------------------------------------------------------------------------------
+
+• .count()
+
+    Por fim temos o comando count(), que nos exibe o número de ocorrências de um
+    determinádo objeto, passando como parâmetro, em uma lista.
+
+
+    # Essa é nossa lista, vamos repetir um elemento para testarmos o comando count.
+
+    >>> livros.append('Oracle')
+    ['Oracle', 'Android', 'Python', 'Delphi', 'SqlServer', 'Java']
+
+    # Retornamos com o elemento 'Oracle' que removemos em um dos exemplos
+
+    >>> livros
+    ['Android', 'Delphi', 'Java', 'Oracle', 'Python', 'SqlServer', 'Oracle']
+
+    # Portanto nossa lista agora está assim, aplicaremos o comando count('Oracle')
+
+    >>> livros.count('Oracle')
+    2
+
+    # Repare que ele encontrou na nossa listagem, 2x o elemento 'Oracle'
+    # ['Android', 'Delphi', 'Java', 'Oracle', 'Python', 'SqlServer', 'Oracle']
+    #                                  1                                 2
+    # Da forma que esperavamos.
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+\\ RASCUNHO UTILIZADO ANTES DA FORMATAÇÃO \\
+
+Comandos para complementar listas 
+lista.append('elemento'), lista.insert(posição,'Elemento'), 
+
+lista.append('6') # Vai adicionar o elemento '6' ao final da lista 
+
+lista.insert(0,'0') # Vai adicionar o elemento '0' na posição 0 da lista, 
+                    # e avançar 1 casa de cada elemento para reposicionar
+                    # o restante da lista.
+
+
+Comandos para apagar elementos da lista 
+del lista['Elemento'], lista.pop('posição'), lista.remove('Elemento')
+
+del lista['1']
+               # Irá remover o elemento que estiver na POSIÇÃO 1 da lista
+               # como toda contagem computacional começa em 0, repare que 
+               # na nossa lista temos lista = ['1', '2', '3', '4', '5'],
+               # com o comando iremos remover o elemento '2' da lista
+               # e reposicionar os índices.
+
+lista.pop('1') 
+               # Também irá remover o elemento que estiver na POSIÇÃO 1 da
+               # lista e irá reposicionar os índice, a diferença do comando
+               # anterior, é que se você deixar em branco () ele irá remover
+               # apenas o ultimo elemento que estiver na última posição.
+
+lista.remove('Elemento' )
+
+               # Diferente dos comandos anteriores .remove vai encontrar o
+               # ELEMENTO da lista, remover e reposicionar.
+
+Caso tente utilizar alguns dos elementos sem que ele exista, seja a posição
+ou elemento, o terminal irá retornar um erro.
+
+A estrutura condicional 'IF' pode ser usada para para verificar se o elemento
+existe dentro da lista, antes de remove-lo
+
+EX: if '1' in lanche:       # Assim ele irá se certificar de que o numero 1
+        lanche.remove('1')  # existe na lista, antes de remove-lo
+
+
+Você também pode criar listas através de RANGES utilizando o comando list()
+
+EX:
+
+lista = list(range(1,6)) # Com este comando criamos a mesma lista porém com o 
+                         # método list(range())
+
+Você também pode ordenar uma lista que esteja fora de ordem através do método
+.sort()
+
+EX:
+
+lista = ['5', '1', '3', '2', '4', '6']
+
+lista.sort() # Dessa forma os elementos da lista serão reposicionados
+             # para ['1','2','3','4','5','6']
+
+lista.sort(reverse=True) # Você pode também reposicionar a contagem de 
+                         # trás pra frente.
+                         # ['6','5','4','3','2','1']
+
+Também é possível útilizar o comando len(lista) para exibir o tamanho 
+da lista.
+
+lista = ['1','2','3','4']
+len(lista) = 5
+
+
+\\ LINK FORMATADO \\
+https://www.devmedia.com.br/como-trabalhar-com-listas-em-python/37460
