@@ -1,0 +1,98 @@
+======================================PYTHON======================================
+============================ESTRUTURA DE REPETIÇÃO FOR============================
+==================================================================================
+
+   Em algumas situações é comum que uma mesma instrução (ou conjunto delas) precise
+ser executada várias vezes seguidas. Nesses casos, normalmente utilizamos um loop 
+(ou laço de repetição) que permite executar o mesmo bloco de código enquanto uma 
+condição é atendida. Em Python, os loops são codificados com as estruturas de repe-
+tição for e while.
+
+Neste arquivo apresentaremos a opção for.
+
+
+===================================================================================
+
+
+    • for CONTADOR in LISGA / RANGE():
+     
+   
+    O laço for nos permite percorrer os itens de uma coleção e, para cada um deles,
+executar o bloco de código declarado no loop. Sua sintaxe é a seguinte:
+
+    for variavel in lista/range:
+    comandos a serem executados
+
+    Enquanto percorremos a lista de valores, a variável indicada no for receberá, 
+a cada interação, um item da coleção. Assim, podemos executar algum processamento
+com esse elemento. No código abaixo percorremos a lista nomes e imprimimos cada
+elemento.
+
+-----------------------------------------------------------------------------------
+
+    EX 1: PERCORRENDO UMA LISTA  
+
+
+    # Primeiro vamos definir uma variável do tipo lista, com alguns nomes.
+    
+    >>> nomes = ['Raul', 'Camila', 'Ramon', 'Salmon', 'Vilmon']
+    
+    # Agora utilizando o comando for, definimos uma variável que receberá cada
+    # elemento da lista percorrida, podemos utilizar qualquer valor como variável
+    # no exemplo vamos utilizar 'n', a cada repetição do laço, 'n' receberá o valor
+    # da respectiva lista.
+
+    >>> for n in nomes:
+    ...     print(n)
+    ...
+    Raul
+    Camila
+    Ramon
+    Salmon
+    Vilmon
+    >>>
+
+    # Na segunda linha mandamos imprimir 'n' para cada valor recebido da lista, e 
+    # Obtemos como resultado, cada elemento da lista nomes separados por linha, 
+    # isso porquê a index percorrido da lista nomes, n recebeu seu valor.
+    # Por exemplo: Na primeira execução for n recebeu nomes[0] que é o elemento
+    # 'Raul, na segunda execução for n recebeu nomes[1] que é 'Camila', e assim
+    # respectivamente.
+
+-----------------------------------------------------------------------------------
+
+    EX 2: PERCORRENDO UMA LISTA POR RANGE  
+
+
+    # Vamos buscar o mesmo resultado, porém agora sabemos que temos 5 elementos em 
+    # nossa lista de nomes.
+    
+    >>> nomes = ['Raul', 'Camila', 'Ramon', 'Salmon', 'Vilmon']
+    
+    # Agora utilizando o comando for in range(), vamos definir que n receberá um
+    # valor de 0 a 5, OBSERVE, de 0 a 5 temos 6 valores, porém em range, a contagem
+    # para no valor antecessor ao ultimo parâmetro, no entanto, 0,5 irá nos exibir
+    # 0, 1, 2, 3 e 4. O 5 ficará de fora da contagem.
+    # Então para cada valor de (0,5) n receberá o valor.
+
+    >>> for n in range(0,5):
+
+    # A cada rodada, n receberá o valor de 0 a 5 ( com exceção do 5), portanto:
+    # na primeira rodada n = 0, segunda rodada n = 1....
+    # Agora podemos utilizar n como parâmetro de index para acessar nossa lista
+    # Desta forma podemos repetir o processo do exemplo 1
+
+    >>> for n in range(0,5):
+    ...     print(nomes[n])
+    ...
+    Raul
+    Camila
+    Ramon
+    Salmon
+    Vilmon
+    ...
+
+    # Pronto, repare que obtivemos o mesmo resultado, porém essa forma só funciona 
+    # Quando sabemos a quantidade de elementos que temos em nossa lista.
+
+    

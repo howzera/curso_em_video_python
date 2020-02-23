@@ -1,0 +1,17 @@
+======================================PYTHON======================================
+======================================TUPLAS======================================
+================================================================================== 
+
+    Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista Da 
+Estrutura de Dados Tupla é que a Lista pode ter elementos adicionados, editados
+e removidos a qualquer momento, enquanto a Tupla, após definida, não permite nenhu-
+ma alteração.
+
+    Devemos pensar num primeiro momento, que a Tupla é uma lista que restringe a 
+alteração. No entanto, pensar numa tupla como sendo somente uma lista imutável não
+está totalmente correto.
+
+    Tuplas possuem muitas características das listas LISTAS, porém, possui um pro -
+pósito diferente e não raramente levamos um tempo para conseguir realmente perceber
+a sutíl diferença.
+
