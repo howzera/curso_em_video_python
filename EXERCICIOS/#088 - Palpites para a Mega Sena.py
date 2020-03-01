@@ -1,6 +1,7 @@
 # Exercício Python 088: Faça um programa que ajude um jogador da MEGA SENA a criar palpites.
-# O programa vai perguntar quantos jogos serão gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta.
-#https://youtu.be/Hd7Ycaj61xE
+# O programa vai perguntar quantos jogos serão gerados e vai sortear 6 números entre 1 e 60 para cada jogo, 
+# cadastrando tudo em uma lista composta.
+# https://youtu.be/Hd7Ycaj61xE
 
 
 from random import randint
@@ -40,3 +41,5 @@ while rodada <= partidas:
 for i, l in enumerate(jogo):
     print(f'Jogo {i+1}: {l}')
     sleep(1)
+
+

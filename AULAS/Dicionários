@@ -1,0 +1,246 @@
+====================================PYTHON====================================
+=================================DICIONÁRIOS==================================
+==============================================================================
+
+
+    Em PYTHON, dicionários são arrays associativos, ou seja, um determinado
+valor passa a ser vinculado a uma chave, para atribuir uma variável composta
+como um DICIONÁRIO, utilizamos a atribuição {}  separando por CHAVE : VALOR
+e ',' para cada chave, e cada elemento deve ser separado por ' ou ".
+    Por exemplo:
+
+    #Dicionário em PYTHON
+
+    dicionario_sites{"LORE": "loremoveisrusticos.com", "DUCHEF" : "madeirasduchef.com.br}
+
+    No dicionário a cima a CHAVE "LORE" foi vinculada ao valor "LINK". Assim,
+para imprimir o valor chame:
+
+    print(dicionario_sites['LORE'])
+    #Será impresso "loremoveisrusticos.com.br"
+
+    Se o dicionário tiver vários elementos, você pode usar laços para imprimi-
+los:
+
+    #dicionario_sites = {"LORE": "loremoveisrusticos.com", "DUCHEF": "madeiraduchef.com.br}
+
+    for chave in dicionario_sites:
+        print(dicionario_sites[chave])
+
+
+    Dicionários são estruturas de dados semelhantes as tuplas e listas, porém
+em dicionários como pode observar, podemos usar indices literáis, podemos per   -
+sonalizar os indices atribuindo nomes para facilitar a buscas dos elementos.
+
+    Dicionários em PYTHON são identificados de duas formas conforme dito anteri -
+mente, podemos utilizar {} chaves para atribuição, ou o comando dict().
+
+    Por exemplo:
+
+    # Atribuindo uma variável composta em DICTIONARY
+    
+    dados = dict("INDICE":"VALOR", "INDICE2":"VALOR2", "INDICE3" : "VALOR3")
+
+    -----------------------------------------------------------------------------
+    
+    # Para facilitar, vamos imaginar uma ficha com nome, idade e sexo. E dessa vez
+    #utilizando {}. OBS: Você pode separar os valores tanto por ' ou ".
+    
+    dados = {'NOME':'RAUL', 'IDADE':25, 'SEXO':'M'}
+
+    -----------------------------------------------------------------------------
+    # Se buscarmos os dados em uma função print vamos obter:
+    
+    print(dados)
+    {'NOME': 'RAUL', 'IDADE': '25', 'SEXO': 'M'}
+
+    -----------------------------------------------------------------------------
+    # Podemos adicionar novos elementos ao nosso adicionário usando uma nova    
+    # atribuíção:
+    # OBS: No momento em que vamos referenciar o elemento, útilizamos [] e é sem-
+    # pre bom utilizarmos aspas duplas "" em vez de simples.
+
+    dados['altura'] = '177'
+
+    # Se vocÊ repetir um INDEX vocÊ poderá substítuir o valor atual.
+    # Por exemplo:
+
+    dados["NOME"] = 'JOÃO'
+
+    # Se printarmos novamente com as novas atribuíções teremos.
+
+    print(dados)
+
+    {'NOME' : 'JOÃO', 'IDADE' : '25', 'SEXO' : 'M', 'altura' : '177'}
+    
+    -----------------------------------------------------------------------------
+    # Vamos praticar com um novo exemplo
+    # Vamos criar uma lista de filmes
+    # Podemos também útilizar a estrutura da seguinte forma.
+
+    filmes={'titulo' : 'Star Wars'  ,
+            'ano'    :  1997        , 
+            'diretor':'George Lucas',
+            }
+
+    # Através deste comando vamos anotar algumas coisas.
+    # vamos printar a variável composta DICTIONARY que acabamos de criar
+    
+    print(filmes)
+    {'titulo': 'star wars', 'ano': 1997, 'diretor': 'George Lucas'}
+
+    # Vamos compreender a diferença entre KEYS, VALUE E ITEMS.
+
+    filmes < Aqui temos nossa variável composta em DICTIONARY
+
+    {'titulo': 'star wars', 'ano' :  1997 ,'diretor': 'George Lucas'}
+      |KEYS| :   |VALUE|  , |KEYS|:|VALUE|,  |KEYS| : |VALUE|}
+
+    # De forma ilustrativa entenda que KEYS são as CHAVES em que usaremos
+    # de referência para aquele setor, e VALUE serão os valores que encon -
+    # traremos dentro daquela KEY.
+
+    # Se utilizarmos um print em .keys() vamos obter
+
+    print(filme.keys())
+    dict_keys(['titulo', 'ano', 'diretor'])
+
+    # Se utilizarmos um print em .values() vamos obter
+
+    print(filmes.value())
+    dict_values(['star wars', 1997, 'George Lucas'])
+
+    # Mas e se utilizarmos um print em .items() ?
+    # Vamos obter uma lista com TUDO que existe dentro do dicionário.
+    # Assim como obtemos como quando printamos apenas a variável.
+    # Porém ele nos exibirá como uma lista e descriminará o comando
+
+    print(filmes.items())
+    dict_items([('titulo', 'star wars'), ('ano', 1997), ('diretor', 'George Lucas')])
+
+    -----------------------------------------------------------------------------
+
+    # Podemos também assim como as listas, percorrer um dicionário através de laços FOR 
+    # E também podemos útilizar os comandos .keys() .value() .items() como referência 
+    # de um laço
+    # Por exemplo
+
+    for k, v in filmes.items():
+        print(f'O {k} é {v}')
+    ...
+    O titulo é star wars
+    O ano é 1997
+    O diretor é George Lucas
+
+    # Compreenda, dentro de filmes.items() temos as KEYS que são TITULO, ANO E DIRETOR.
+    # Temos os VALUES que são star wars, 1997 e George Lucas.
+    # O que acabamos de fazer dentro do laço foi, atribuir que para cadas rodada do for
+    # atrubuiriamos uma KEY para k, e um valor para v, em seguida obtivemos o retorno 
+    # através do print(f'O {k} é {v})
+
+    -----------------------------------------------------------------------------
+
+    # Portanto, assim como vimos em listas e tuplas, os dicionários também podem ser
+    # integrados com listas e tuplas.
+    # Por exemplo:
+
+    # Podemos criar uma lista chamada locadora = []
+
+    locadora = []
+
+    # E em seguida, adicionarmos o nosso dicionário dentro da lista através do append
+
+    locadora.append(filmes)
+    
+    # A lista na posição 0 receberá
+
+    ('titulo', 'star wars'), ('ano', 1997), ('diretor', 'George Lucas')
+
+    # E em caso de mais de 1 elemento dentro da lista, você poderá percorrer
+    # a lista e o dicionário, por exemplo.
+
+    print(locadora[0]["titulo"])
+
+    star wars
+
+    # Utilizamos o index 0 para percorrer a lista, e em seguida o dicionário
+    # 'titulo' para encontrar o titulo do filme, e obtivemos o retorno 'star wars'
+
+    -----------------------------------------------------------------------------
+
+    # Diferente da lista, em que podemos utilizar .append([:]) para replicar uma cópia
+    # de uma lista, em dicionário não conseguimos utilizar ([:]) ois é uma função de 
+    # fatiamento, e fatiamento não é permitido em dicionários.
+    # Portanto, existe um comando que se aplica apenas em dicionários, que é o 
+    # .copy(), e substituí o .append([:]) utilizado nas listas.
+    # Exemplo:
+
+    estado = {}
+    brasil = {}
+
+    for c in range(0, 3):
+        estado['uf'] = str(input('Unidade Federativa' ))
+        estado['sigla'] = str(input('Sigla do Estado: '))
+        brasil.append(estado.copy())
+
+    print(brasil)
+
+    # Fizemos uma leitura do usuário, para registar 3 estados e suas siglas, e no fim
+    # armazenamos em uma lista brasil.
+
+    -----------------------------------------------------------------------------
+
+
+###### ANOTAÇÕES DURANTE A AULA  ####
+
+
+pessoas = {'nome': 'Raul', 'sexo' : 'M', 'idade' : 22}
+
+print(f'O {pessoas["nome"]} é do sexo {pessoas["sexo"]} e tem {pessoas["idade"]} anos')
+
+
+print(pessoas.keys())
+print(pessoas.values())
+print(pessoas.items())
+
+
+for k in pessoas.keys():
+    print(k)
+
+for k in pessoas.values():
+    print(k)
+
+# Para cada KEY exibe seu VALUE
+for k, v in pessoas.items():
+    print(f'O {k} e {v:<4}')
+
+# ADICIONANDO UM DICIONÁRIO DENTRO DE UMA LISTA
+
+brasil = []
+estado1 = {'uf':'Rio de Janeiro', 'Sigla':'RJ'}
+estado2 = {'uf':'São Paulo','Sigla':'SP'}
+
+brasil.append(estado1)
+brasil.append(estado2)
+
+print(estado1)
+print(estado2)
+print(brasil)
+print(brasil[0])
+print(brasil[1])
+print(brasil[0]['uf'])
+print(brasil[0]['Sigla'])
+print(brasil[1]['uf'])
+print(brasil[1]['Sigla'])
+
+
+estado = {}
+brasil = []
+
+for c in range(0, 3):
+    estado['uf'] = str(input('Unidade Federativa: '))
+    estado['sigla'] = str(input('Sigla do Estado: '))
+    brasil.append(estado.copy())
+
+for e in brasil:
+    print(f'{e["uf"]} - {e["sigla"]}')

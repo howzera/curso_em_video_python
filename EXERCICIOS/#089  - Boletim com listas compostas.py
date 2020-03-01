@@ -1,6 +1,6 @@
 # Exercício Python 089: Crie um programa que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta.
 # No final, mostre um boletim contendo a média de cada um e permita que o usuário possa mostrar as notas de cada aluno individualmente.
-#https://youtu.be/7xrCJnniqMw
+# https://youtu.be/7xrCJnniqMw
 
 dados = []
 lista = []
@@ -29,3 +29,5 @@ while True:
         print(f'BOLETIN DO ALUNO(a): {dados[opc][0]}\nNOTAS: {dados[opc][1]}')
     else:
         print('--- VOLTE SEMPRE ---')
+
+
