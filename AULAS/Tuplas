@@ -2,7 +2,7 @@
 ======================================TUPLAS======================================
 ================================================================================== 
 
-    Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista Da 
+    Tupla são Listas imutáveis. O que diferencia a Estrutura de Dados Lista Da 
 Estrutura de Dados Tupla é que a Lista pode ter elementos adicionados, editados
 e removidos a qualquer momento, enquanto a Tupla, após definida, não permite nenhu-
 ma alteração.

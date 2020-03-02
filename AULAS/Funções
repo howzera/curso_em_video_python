@@ -1,0 +1,113 @@
+======================================PYTHON======================================
+======================================FUNÇÕES=====================================
+==================================================================================
+
+    O conceito de função é um dos mais importantes na matemática. Em computação,
+uma função é uma sequência de instruções que computa um ou mais resultados que 
+chamamos de parâmetros. Ao decorrer do curso utilizamos funções já prontas do 
+Python, como o: print(), input(), format(), e type().
+
+    Também podemos criar nossas próprias funções. Por exemplo, quando queremos
+calcular a razão do espaço pelo tempo podemos definir uma função recebendo estes
+parâmetros:
+
+    f(espaco, tempo) = espaco/tempo
+
+    Essa razão de espaço pelo tempo é o que chamamos de velocidade média da físi-
+ca, Podemos então dar este nome a nossa função:
+
+    velocidade(espaco, tempo) = espaco/tempo
+
+    O Python permite definirmos funçõ~es como essa da velocidade média. A sintaxe
+é muito parecida com a da matemática. Para ddefinirmos uma função no Python utili 
+zamos o comando def:
+
+    def velocidade(espaco, tempo):
+        pass
+
+    Logo após o def vem o nome da função e entre parêntese vêm os seus parâmetros.
+Uma função também tem um escopo, um bloco de instruções em que colocamos os cálcu
+los e estes devem seguir a identação padrão do Python (4 espaços a direita).
+
+    Como nossa função ainda não faz nada, utlizamos a palavra chave pass para di -
+zer ao interpretador que definiremos os cálculos depois. A palavra pass não é usada
+apenas em funções, podemos usar em qualquer bloco de comandos como nas instruções: 
+if, while e for, por exemplo.
+
+    Vamos substituir a pallavra pass pelos cálculos que nossa função deve executar:
+
+    def velocidade(espaco, tempo):
+        v = espaco/tempo
+        print(f'Velocidade': {v} m/s)
+
+    Nossa função faz o cálculo da velocidade média e utiliza a função print() do 
+Python para imprimir na tela. Vamos testar nossa função:
+
+    >>> velocidade(100, 20)
+    velocidade: 5 m/s 
+
+
+    De forma geral, uma função é uma estrutura para agrupar um conjunto de instru 
+ções que podem ser reutilizadas. Agora qualquer parte do nosso programa pode cha -
+mar a função velocidade quando precisar calcular a velocidade média de um veículo,
+por exemplo. E podemos chamá-la mais de uma vez, o que significa que não precisa -
+mos escrever o mesmo código novamente.
+
+    Funções são conhecidas por diversos nomes em lunguagens de programação, como 
+sub-rotinas, rotinas, procedimentos, métodos e subprogramas.
+
+    Podemos ter funções sem parâmetros. Por exemplo, podemos ter uma função que 
+di 'oi' na tela:
+
+    def diz_oi():
+    ...     print('OI')
+
+    >>
+    >> diz_()
+    oi
+
+
+
+    Um conjunto de parâmetros consiste em uma lista com nenhum ou mais elementos
+que popdem ser obrigatórios ou opcionais. Para um parâmetro ser opcional atribuí-
+mos um valor padrão (default) para ele, o mais comum é utilizar None. Por exemplo:
+
+    def dados(nome, idade=None):
+        print(f'nome: {nome}')
+        if idade is not None:
+            print(f'idade:{idade})
+
+        else:
+            print('Idade: Não informada')
+
+    O código da função acima recebe uma idade como parâmetro e faz uma verificação
+com uma instrução if: se a idade for diferente de None, ela vai imprimir a idade, 
+caso contrário vai imprimir idade não informada. Vamos testar passando os dois parâ
+metros e depois apenas o nome:
+
+         >>> dados('joão', 20)
+        nome: joão
+        idade: 20
+
+        Agora passando apenas o nome:
+
+        >>> dados('joão')
+        nome: joão
+        idade: não informada
+
+        E oque acontece se passarmos apenas a idade?
+
+        >>> dados(20)
+        nome: 20
+        idade: não informada
+
+    Veja que o Python obedece a ordem dos parâmetros. Nossa intenção era passar o nú
+mero 20 como idade mas o interpretador vai entender que estamos passando o nome 
+porque não avisamos isso à ele. Caso queiramos passar apenas a idade, devemos 
+nomear o parâmetro:
+
+    >>> dados(idade=20)
+
+    O intepretador vai acusar um erro já que não passamos o atributo obrigatório: nome.
+
+
